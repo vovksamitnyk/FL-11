@@ -62,7 +62,6 @@ section.heading .text::after {
 }
 section.heading a:visited {
     text-decoration: none;
-/*    color: blueviolet;*/
 }
 
 .submit-btn {
@@ -79,7 +78,6 @@ section.heading a:visited {
     background-color: #87CEFA;
     border-color: #87CEFA;
 }
-
 
 .gallery-container .box-bg:hover h2 {
     color: #FFFFFF;
