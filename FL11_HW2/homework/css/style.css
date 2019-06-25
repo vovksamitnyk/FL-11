@@ -49,6 +49,7 @@ section.heading a {
 section.heading a:hover {
     color: #ffb347;
     text-decoration-line: none;
+    border-left: 2px solid #ffb347;
 }
 
 section.heading .text::after {
