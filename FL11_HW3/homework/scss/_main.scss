@@ -1,0 +1,20 @@
+body {
+    background: url("../img/m-h-day.jpg") no-repeat;
+    background-size: contain;
+    background-position-y: -80px;
+    margin: 0px;
+}
+
+div.header-wrap {
+    display: block;
+    justify-content: flex-start;
+    margin: 10px 0 0 80px;
+    max-width: 45%;
+}
+
+p.header_heading {
+    font-size: 50px;
+}
+p.header_text {
+    font-size: 10px;
+}
