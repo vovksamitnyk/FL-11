@@ -35,5 +35,5 @@ if (!isNaN(c) && correctInputData && c > 0) {
     }
 
 } else {
-    console.log('Invalid input data\nReboot the page and try again if you wish.');
+    console.log('Invalid input data\nReload the page and try again if you wish.');
 }
