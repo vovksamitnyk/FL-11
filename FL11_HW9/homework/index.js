@@ -1,35 +1,35 @@
 let people = [
     {
-        "_id": "5b5e3168c6bf40f2c1235cd6",
-        "index": 0,
-        "birthday": '2016-03-18T00:00:00',
-        "eyeColor": "green",
-        "name": "Stein",
-        "favoriteFruit": "apple"
+        '_id': '5b5e3168c6bf40f2c1235cd6',
+        'index': 0,
+        'birthday': '2016-03-18T00:00:00',
+        'eyeColor': 'green',
+        'name': 'Stein',
+        'favoriteFruit': 'apple'
     },
     {
-        "_id": "5b5e3168e328c0d72e4f27d8",
-        "index": 1,
-        "birthday": '1991-02-11T00:00:00',
-        "eyeColor": "blue",
-        "name": "Cortez",
-        "favoriteFruit": "strawberry"
+        '_id': '5b5e3168e328c0d72e4f27d8',
+        'index': 1,
+        'birthday': '1991-02-11T00:00:00',
+        'eyeColor': 'blue',
+        'name': 'Cortez',
+        'favoriteFruit': 'strawberry'
     },
     {
-        "_id": "5b5e3168cc79132b631c666a",
-        "index": 2,
-        "birthday": '1984-04-17T00:00:00',
-        "eyeColor": "blue",
-        "name": "Suzette",
-        "favoriteFruit": "apple"
+        '_id': '5b5e3168cc79132b631c666a',
+        'index': 2,
+        'birthday': '1984-04-17T00:00:00',
+        'eyeColor': 'blue',
+        'name': 'Suzette',
+        'favoriteFruit': 'apple'
     },
     {
-        "_id": "5b5e31682093adcc6cd0dde5",
-        "index": 3,
-        "birthday": '1994-04-17T00:00:00',
-        "eyeColor": "green",
-        "name": "George",
-        "favoriteFruit": "banana"
+        '_id': '5b5e31682093adcc6cd0dde5',
+        'index': 3,
+        'birthday': '1994-04-17T00:00:00',
+        'eyeColor': 'green',
+        'name': 'George',
+        'favoriteFruit': 'banana'
     }
 
 ]
@@ -38,7 +38,7 @@ let people = [
 
 function returnsNumbers(string) {
     let array = [];
-    let numbers = "0123456789";
+    let numbers = '0123456789';
     for (let i = 0; i < string.length; i++) {
         for (let j = 0; j < numbers.length; j++) {
             if (string[i] === numbers[j]) {
@@ -49,7 +49,7 @@ function returnsNumbers(string) {
     return array;
 }
 
-returnsNumbers("n1um3ber95");
+returnsNumbers('n1um3ber95');
 
 
 /*============"(  01  )"=============*/
@@ -66,7 +66,7 @@ function returnsTypes() {
     }
     return types
 }
-returnsTypes(5, "ejfhvbej", null, alert, false, undefined, "ejfhvbej");
+//returnsTypes(5, 'ejfhvbej', null, alert, false, undefined, 'ejfhvbej');
 
 
 /*============"(  02  )"=============*/
@@ -76,9 +76,9 @@ function executeforEach(a, b) {
         b(a[i]);
     }
 }
-executeforEach([3, 4, 56], function(el) {
-    console.log(el)
-})
+//executeforEach([3, 4, 56], function(el) {
+//    console.log(el)
+//})
 
 
 /*============"(  03  )"=============*/
@@ -91,9 +91,9 @@ function mapArray(a3, b3) {
     });
     return array
 }
-mapArray([3, 4, 56], function(el) {
-    return el + 3
-});
+//mapArray([3, 4, 56], function(el) {
+//    return el + 3
+//});
 
 
 /*============"(  04  )"=============*/
@@ -108,16 +108,16 @@ function filterArray(a4, b4) {
     });
     return array
 }
-filterArray( [3, 4, 0, 0, 55, 56], function(el) {
-    return el > 3
-});
+//filterArray( [3, 4, 0, 0, 55, 56], function(el) {
+//    return el > 3
+//});
 
 
 //*============"(  05  )"=============*/
 
 function showFormattedDate(notFormattedDate) {
     let shortMonth = notFormattedDate.toLocaleString('en-us', { month: 'short' });
-    return "Date: " + shortMonth + " " + notFormattedDate.getDate() + " " + notFormattedDate.getFullYear();
+    return 'Date: ' + shortMonth + ' ' + notFormattedDate.getDate() + ' ' + notFormattedDate.getFullYear();
 }
 showFormattedDate(new Date('2019-01-27T23:10:00'));
 
@@ -146,9 +146,12 @@ daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00'))
 
 //*============"(  08  )"=============*/
 
+const age = 18;
+const daysInYear = 365;
+
 function getAmountOfAdultPeople(data) {
     let amountOfAdultPeople = filterArray( data, function(x) {
-        return daysBetween(x.birthday, new Date()) > 18 * 365;
+        return daysBetween(x.birthday, new Date()) > age * daysInYear;
     } );
     return amountOfAdultPeople.length;
 }
