@@ -28,12 +28,16 @@ function createNote() {
         checkBox.className = 'material-icons check_box_outline_blank';
         checkBox.innerHTML = 'check_box_outline_blank';
         checkBox.addEventListener('click', drawCheckBox);
+        let pen = document.createElement('a');
+        pen.className = 'material-icons create';
+        pen.innerHTML = 'create';
         let garbage = document.createElement('span');
         garbage.className = 'material-icons delete';
         garbage.innerHTML = 'delete';
         garbage.addEventListener('click', deleteNote);
         newDiv.appendChild(checkBox);
         newDiv.appendChild(text);
+        newDiv.appendChild(pen);
         newDiv.appendChild(garbage);
         catList.appendChild(newDiv);
         getNewNote.value = '';
